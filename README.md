@@ -2,21 +2,22 @@
 
 ## Purpose
 
-This repository contains configurations for deployments on the GlueOps Platform.  The repository layers configurations and allows common configuration options to be cascaded across deployments which share common attributes, such as a common image for application that is deployed to different environments.
+This repository contains configurations for deployments on the GlueOps Platform.  The repository layers configurations and allows common configuration options to be cascaded across deployments that share common attributes, such as a common image for an application that is deployed to different environments.
 
 ## Directory Structure
 
-It contains three, core directories:
+The repository contains three, core directories:
 
 ```sh
+deployment-configurations
 ├── apps
-├── env-overlays
 ├── common
+├── env-overlays
 ```
 
 * **apps**: Contians configurations for each applications deployed on the GlueOps platform.
-*  **common**: Contains any configurations common to all deployments on the platform.  For example, if all images are deployed from ghcr, that configuration can be set at this level to enable DRY configuration files.
-*  **env-overlays**: Contains configurations that will be applied to a collection of environments, such as `prod` vs `nonprod`.
+* **common**: Contains any configurations common to all deployments on the platform.  For example, if all images are deployed from ghcr, that configuration can be set at this level to enable DRY configuration files.
+* **env-overlays**: Contains configurations that will be applied to a collection of environments, such as `prod` vs `nonprod`.
 
 ## `apps` Directory
 
@@ -28,7 +29,7 @@ Any configurations shared among all environments, such as the image repository b
 
 Configurations unique to each environment, such as image tag, secrets, and port, are stored within the various directories contained within the `env` directory in a `values.yaml` file.
 
-`previews` is a special directory that is used to configure ephemeral deployments based upon opene pull requests are is covered in more detail in this [document](tbd).
+`previews` is a special directory that is used to configure ephemeral deployments based upon open pull requests are is covered in more detail in this [document](tbd).
 
 ```sh
 apps
@@ -44,7 +45,7 @@ apps
     ├── base
     │   └── base-values.yaml
     └── envs
-│       ├── previews
+        ├── previews
         ├── prod
         ├── stage
         └── uat
@@ -72,7 +73,7 @@ To bootstrap the `deployment-configurations` repository, create a template from 
 
 Add new directories under `apps` for each additional application to deploy.
 
-Similarly, change the subdirectories under each application to reflect the environments for which each application will be deployed.
+Similarly, change the subdirectories under each application to reflect the environments for which each application will be deployed.  These directories are customizable to fit an organization's deployment goals.
 
 For example, to deploy the applications `data-api` in `stage` and `prod` environments and `commerce-front-end` in `uat` and `prod` environments, The resulting directory structure would be as follows:
 

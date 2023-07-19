@@ -68,7 +68,7 @@ The `prod` directory contains configurations which apply to all applications in 
 
 ## Creating your `deployment-configurations` Repository
 
-To bootstrap the `deployment-configurations` repository, create a template from this repository in the github organization with the associated application code and replace the sample application names (`front-end-antonios-tacos` and `front-end-antonios-tacos`) with the names of the applications you'd like to deploy.
+To bootstrap the `deployment-configurations` repository, [create a template from this repository](https://github.com/new?template_name=deployment-configurations&template_owner=GlueOps) in the github organization with the associated application code and replace the sample application names (`front-end-antonios-tacos` and `front-end-antonios-tacos`) with the names of the applications you'd like to deploy.
 **Note:** The names of each directroy _must_ match the names of the associated application repositories which contain application code.
 
 Add new directories under `apps` for each additional application to deploy.
@@ -88,7 +88,8 @@ deployment-configurations
 │   │       │   ├── common
 │   │       │   │   └── values.yaml
 │   │       │   └── pull-request-number
-│   │       │       └── values.yaml
+│   │       │       └── 1
+│   │       │           └── values.yaml
 │   │       ├── prod
 │   │       │   └── values.yaml
 │   │       ├── stage
@@ -103,7 +104,8 @@ deployment-configurations
 │           │   ├── common
 │           │   │   └── values.yaml
 │           │   └── pull-request-number
-│           │       └── values.yaml
+│           │       └── 1
+│           │           └── values.yaml
 │           ├── prod
 │           │   └── values.yaml
 │           ├── stage

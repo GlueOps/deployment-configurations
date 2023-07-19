@@ -28,12 +28,15 @@ Any configurations shared among all environments, such as the image repository b
 
 Configurations unique to each environment, such as image tag, secrets, and port, are stored within the various directories contained within the `env` directory in a `values.yaml` file.
 
+`previews` is a special directory that is used to configure ephemeral deployments based upon opene pull requests are is covered in more detail in this [document](tbd).
+
 ```sh
 apps
 ├── front-end-antonios-tacos
 │   ├── base
 │   │   └── base-values.yaml
 │   └── envs
+│       ├── previews
 │       ├── prod
 │       ├── stage
 │       └── uat

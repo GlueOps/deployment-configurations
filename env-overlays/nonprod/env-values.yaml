@@ -1,0 +1,3 @@
+image:
+  name: antoniostacos/wordpress
+  tag: v0.0.1-env-nonprod-config

@@ -1,0 +1,17 @@
+image:
+  registry: ghcr.io
+  pullPolicy: Always
+  port: 80
+
+service:
+  enabled: true
+
+deployment:
+  replicas: 1
+  enabled: true
+  imagePullPolicy: Always
+  imagePullSecrets: nonprod-regcred
+  resources:
+    requests:
+      cpu: 100m
+      memory: 128Mi

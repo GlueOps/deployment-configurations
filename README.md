@@ -44,6 +44,7 @@ apps
     ├── base
     │   └── base-values.yaml
     └── envs
+│       ├── previews
         ├── prod
         ├── stage
         └── uat
@@ -78,19 +79,33 @@ For example, to deploy the applications `data-api` in `stage` and `prod` environ
 ```sh
 deployment-configurations
 ├── apps
-│   ├── data-api
+│   ├── back-end-antonios-tacos
 │   │   ├── base
 │   │   │   └── base-values.yaml
 │   │   └── envs
+│   │       ├── previews
+│   │       │   ├── common
+│   │       │   │   └── values.yaml
+│   │       │   └── pull-request-number
+│   │       │       └── values.yaml
 │   │       ├── prod
 │   │       │   └── values.yaml
-│   │       └── stage
+│   │       ├── stage
+│   │       │   └── values.yaml
+│   │       └── uat
 │   │           └── values.yaml
-│   └── commerce-front-end
+│   └── front-end-antonios-tacos
 │       ├── base
 │       │   └── base-values.yaml
 │       └── envs
+│           ├── previews
+│           │   ├── common
+│           │   │   └── values.yaml
+│           │   └── pull-request-number
+│           │       └── values.yaml
 │           ├── prod
+│           │   └── values.yaml
+│           ├── stage
 │           │   └── values.yaml
 │           └── uat
 │               └── values.yaml

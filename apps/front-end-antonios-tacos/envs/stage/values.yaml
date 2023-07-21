@@ -1,1 +1,12 @@
-# configuration which apply only to the stage deployment of this application
+image:
+  tag: latest
+ingress:
+  enabled: true
+  ingressClassName: public
+  entries:
+    - name: public
+      hosts:
+        - hostname: httpd-stage.example.com
+
+deployment:
+  replicas: 1

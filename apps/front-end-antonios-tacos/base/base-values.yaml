@@ -1,1 +1,3 @@
-# Base configurations, which apply to all environments of this application
+image:
+  repository: httpd
+  port: 80

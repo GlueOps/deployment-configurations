@@ -18,14 +18,10 @@ deployment:
       cpu: 100m
       memory: 128Mi
 
-image:
 ingress:
   enabled: true
   ingressClassName: public
   entries:
     - name: public
       hosts:
-        - hostname: httpd.example.com
-
-deployment:
-  replicas: 3
+        - hostname: httpd-full-config.example.com

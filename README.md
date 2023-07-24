@@ -31,6 +31,8 @@ Configurations unique to each environment, such as image tag, secrets, and port,
 
 `previews` is a special directory that is used to configure ephemeral deployments based upon open pull requests are is covered in more detail in this [document](tbd).
 
+The `example-full-config` directory contains a `prod` example of the entire configuration without using the layering structure found in other examples.
+
 ```sh
 apps
 ├── front-end-antonios-tacos

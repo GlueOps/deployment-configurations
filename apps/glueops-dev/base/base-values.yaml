@@ -1,0 +1,4 @@
+image:
+  registry: ghcr.io
+  repository: fakela/glueops-dev
+  port: 80

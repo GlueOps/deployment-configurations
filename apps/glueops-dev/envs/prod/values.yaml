@@ -1,0 +1,17 @@
+image:
+  tag: 'v0.2.0'
+
+ingress:
+  enabled: true
+  ingressClassName: public
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt
+  tls:
+    - secretName: glueops-dev-prod.yolo.glueops.dev
+      hosts:
+        - glueops-dev-prod.yolo.glueops.dev
+  entries:
+    - name: public
+      hosts:
+        - hostname: glueops-dev-prod.apps.test-80-np.venkata.onglueops.rocks
+        - hostname: glueops-dev-prod.yolo.glueops.dev

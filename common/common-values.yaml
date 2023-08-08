@@ -1,15 +1,1 @@
-image:
-  registry: docker.io
-  pullPolicy: Always
 
-service:
-  enabled: true
-
-deployment:
-  replicas: 1
-  enabled: true
-  imagePullPolicy: Always
-  resources:
-    requests:
-      cpu: 100m
-      memory: 128Mi
